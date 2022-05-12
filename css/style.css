@@ -10,6 +10,16 @@ body {
     display: flex;
 }
 
+a,div {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: black;
+}
+
 /** HEADER **/
 
 header {
@@ -17,14 +27,14 @@ header {
     top: 0;
     position: fixed;
     width: 100%;
-    height: 40px;
+    height: 30px;
     background: #59C2DF;
-    padding: 20px;
+    padding: 15px;
 }
 
 header a {
     color: black;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin-left: 10px;
 }
@@ -49,30 +59,16 @@ header a {
     display: inline-block;
 }
 
-a,div {
-    text-decoration: none;
-    color: #232323;
-    transition: color 0.3s ease;
-}
-
-a:hover{
-    color: black;
-}
-
-li:hover,
-li:focus{
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: bolder;
-}
-
 /** MENU TOGGLE **/
+
+#nav-content {
+    height: 100%;
+}
 
 #menuToggle {
     display: block;
     position: relative;
-    top: 100px;
+    top: 90px;
     left: 50px;
     z-index: 1;
     -webkit-user-select: none;
@@ -90,6 +86,71 @@ li:focus{
     opacity: 0; /* hide this */
     z-index: 2; /* and place it over the hamburger */
     -webkit-touch-callout: none;
+}
+
+/** MENU **/
+
+#navmenu {
+    position: absolute;
+    top: 75px;
+    width: 300px;
+    height: 1000px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 75px;
+    background: #59C2DF;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#navmenu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#navmenu li:hover,
+        li:focus{
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bolder;
+        font-size: 23px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+.onclick-menu:focus {
+    /* clicking on label should toggle the menu */
+    pointer-events: none;
+}
+
+.onclick-menu:hover .onclick-menu-content {
+    /*  opacity is 1 in opened state (see below) */
+    opacity: 1;
+    visibility: visible;
+    display: inherit;
+    /* don't let pointer-events affect descendant elements */
+    pointer-events: auto;
+}
+
+.onclick-menu-content {
+   /* use opacity to fake immediate toggle */
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s;
+}
+.onclick-menu-content li {
+    list-style: none;
 }
 
 /** HAMBURGER / X-MARK **/
@@ -140,62 +201,6 @@ li:focus{
  */
 #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
-}
-
-/** MENU @ TOP LEFT **/
-
-#navmenu {
-    position: absolute;
-    top: 75px;
-    width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 75px;
-    background: #59C2DF;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
-
-#navmenu li {
-    padding: 10px 0;
-    font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul {
-    transform: none;
-}
-
-
-.onclick-menu:focus {
-    /* clicking on label should toggle the menu */
-    pointer-events: none;
-}
-
-.onclick-menu:hover .onclick-menu-content {
-    /*  opacity is 1 in opened state (see below) */
-    opacity: 1;
-    visibility: visible;
-    display: inherit;
-    /* don't let pointer-events affect descendant elements */
-    pointer-events: auto;
-}
-
-.onclick-menu-content {
-   /* use opacity to fake immediate toggle */
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 0.5s;
-}
-.onclick-menu-content li{
-    list-style: none;
 }
 
 /** SMALL SCREEN ADJUSTMENT **/
