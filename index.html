@@ -8,12 +8,16 @@
 	<title>UNJO</title>
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
-<body>
+<body onload="getcurrentyear();">
+	<header>
+		<p>Unjo - Customized motor control</p>
+	</header>
+	<div>
 	<nav role="navigation">
 		<div id="menuToggle">
 			<!--
 			A fake / hidden checkbox is used as click reciever,
-			so you can use the :checked selector on it.
+			so we can use the :checked selector on it.
 			-->
 			<input type="checkbox"/>
 	
@@ -23,52 +27,48 @@
 			<span></span>
 	
 			<!--
-			Too bad the menu has to be inside of the button
-			but hey, it's pure CSS magic.
+			Navigation menu
 			-->
 			<ul id="navmenu">
 				<li><a href="#">Home</a></li>
+				<li><a href="#">News</a></li>
 				<li class="">
 					<div tabindex="0" class="onclick-menu">Customized Motor Control
 						<ul class="onclick-menu-content">
-							<li><a href="#">What we do</a></li>
-							<li><a href="#">How we work</a></li>
-							<li><a href="#">Why customized</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="">
-					<div tabindex="0" class="onclick-menu">News
-						<ul class="onclick-menu-content">
-							<li><a href="#">Sub-1</a></li>
-							<li><a href="#">Sub-2</a></li>
-							<li><a href="#">Sub-3</a></li>
+							<li><a href="#whatwedo">What we do</a></li>
+							<li><a href="#howwework">How we work</a></li>
+							<li><a href="#whycustomized">Why customized</a></li>
 						</ul>
 					</div>
 				</li>
 				<li class="">
 					<div tabindex="0" class="onclick-menu">About Motor Control
 						<ul class="onclick-menu-content">
-							<li><a href="#">News</a></li>
-							<li><a href="#">Case stories</a></li>
-							<li><a href="#">Tech Blog</a></li>
-							<li><a href="#">Downloads</a></li>
+							<li><a href="#casestories">Case stories</a></li>
+							<li><a href="#techblog">Tech Blog</a></li>
+							<li><a href="#downloads">Downloads</a></li>
 						</ul>
 					</div>
 				</li>
 				<li class="">
 					<div tabindex="0" class="onclick-menu">About Unjo
 						<ul class="onclick-menu-content">
-							<li><a href="#">Who we are</a></li>
-							<li><a href="#">Working here</a></li>
-							<li><a href="#">Unjo global network</a></li>
+							<li><a href="#whoweare">Who we are</a></li>
+							<li><a href="#workinghere">Working here</a></li>
+							<li><a href="#unjoglobalnetwork">Unjo global network</a></li>
 						</ul>
 					</div>
 				</li>
-				<li><a href="#">Imprint</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#imprint">Imprint</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
+	</div>
+	<div class="footer">
+		<p>&copy;</p>
+		<p id="year"></p> 
+		<p>Madilyn Bystedt @ Unjo</p>
+	</div>
 </body>
 </html>
