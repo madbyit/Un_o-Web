@@ -17,17 +17,16 @@ header {
     top: 0;
     position: fixed;
     width: 100%;
-    height: 75px;
+    height: 40px;
     background: #59C2DF;
-    align-items: center;
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
-header p {
+header a {
     color: black;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    margin-left: 80px;
+    margin-left: 10px;
 }
 
 /** FOOTER **/
@@ -198,3 +197,20 @@ li:focus{
 .onclick-menu-content li{
     list-style: none;
 }
+
+/** SMALL SCREEN ADJUSTMENT **/
+
+@media all and (max-width: 300px) {
+    header a {
+        font-size: 15px;
+   }
+
+   .footer p {
+    font-size: 10px;
+    }
+
+    #navmenu li {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+ }
