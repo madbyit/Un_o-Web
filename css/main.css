@@ -78,7 +78,7 @@ footer {
     width: 100%;
     /* Height of the footer*/ 
     height: 30px;
-    padding: 0px 10px 10px 10px;
+    padding: 0px 10px 15px 20px;
     bottom: 0;
     background: #59C2DF;
 }
@@ -134,7 +134,7 @@ footer p {
 
 #navmenu li {
     padding: 10px 0;
-    font-size: 22px;
+    font-size: 21px;
     color: black;
 }
 
@@ -143,7 +143,7 @@ footer p {
         text-decoration: none;
         cursor: pointer;
         font-weight: bolder;
-        font-size: 23px;
+        font-size: 22px;
 }
 
 #navmenu .submenu a:hover{
