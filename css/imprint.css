@@ -1,0 +1,10 @@
+ 
+/* IMPRINT PAGE STYLE*/
+
+#imprint div{
+    margin-bottom: 10px;
+}
+
+#postal, #contactinfo {
+    display: inline-block;
+}
