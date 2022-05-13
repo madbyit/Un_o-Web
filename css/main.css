@@ -7,18 +7,19 @@ body {
     color: #cdcdcd;
     font-family: "Avenir Next", "Avenir", sans-serif;
     height: 100%;
-    overflow: hidden;
+    min-width: 250;
+    overflow-x: hidden;
 }
 
 /* Create three equal columns that float next to each other */
 .column {
     display: inline-flex;
     float: left;
-    margin-top: 10%;
+    margin-top: 5%;
     column-width: auto;
 }
 
-.column h2, p {
+.column h1,h2, h3, p {
     color: white;
 }
 
@@ -30,6 +31,7 @@ body {
 /* Middle column */
 .column.middle {
     width: 60%;
+    display: inline-block;
 }
 
 /* Clear floats after the columns */
@@ -76,7 +78,6 @@ footer {
     width: 100%;
     /* Height of the footer*/ 
     height: 30px;
-    margin-top: -200px;
     padding: 0px 10px 10px 10px;
     bottom: 0;
     background: #59C2DF;
@@ -117,7 +118,8 @@ footer p {
 #navmenu {
     position: absolute;
     top: 75px;
-    width: 300px;
+    width: 25%;
+    max-width: 300px;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 75px;
@@ -133,15 +135,19 @@ footer p {
 #navmenu li {
     padding: 10px 0;
     font-size: 22px;
+    color: black;
 }
 
 #navmenu li:hover,
         li:focus {
-        color: black;
         text-decoration: none;
         cursor: pointer;
         font-weight: bolder;
         font-size: 23px;
+}
+
+#navmenu .submenu a:hover{
+    color: white;
 }
 
 /*
@@ -172,6 +178,7 @@ footer p {
     visibility: hidden;
     transition: visibility 0.5s;
 }
+
 .onclick-menu-content li {
     list-style: none;
 }
@@ -243,10 +250,6 @@ footer p {
 
     footer p {
         font-size: 10px;
-    }
-
-    #navmenu {
-        width: 175px;
     }
 
     #navmenu li {
