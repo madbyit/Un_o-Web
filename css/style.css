@@ -1,5 +1,10 @@
 /** STYLE **/
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,7 +12,25 @@ body {
     color: #cdcdcd;
     font-family: "Avenir Next", "Avenir", sans-serif;
     height: 100%;
-    display: flex;
+}
+
+/* Create three equal columns that float next to each other */
+.column {
+    display: inline-flex;
+    float: left;
+    color: white;
+    margin-top: 10%;
+    column-width: auto;
+}
+
+/* Left and right column */
+.column.side {
+    width: 20%;
+}
+  
+/* Middle column */
+.column.middle {
+    width: 60%;
 }
 
 a,div {
@@ -222,7 +245,8 @@ footer p {
         font-size: 15px;
     }
 
-    .column {
+    .column.side, .column.middle {
         width: 100%;
+        margin-top: 20%;
     }
  }
