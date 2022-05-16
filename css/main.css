@@ -319,7 +319,7 @@ footer p {
 }
 
 .slideshow-container img {
-    max-height: 350px;
+    height: 450px;
     border-radius: 10px;
 }
 
@@ -425,6 +425,10 @@ footer p {
         li:focus {
         font-size: 12px;
     }
+
+    .slideshow-container img {
+        height: 250px;
+    }
  }
 
 @media all and (max-width: 450px) {
@@ -445,5 +449,9 @@ footer p {
     .column.side, .column.middle {
         width: 100%;
         margin-top: 20%;
+    }
+
+    .slideshow-container img {
+        height: 100px;
     }
  }
