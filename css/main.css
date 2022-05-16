@@ -401,6 +401,17 @@ footer p {
   to {opacity: 1}
 }
 
+/** COMMON **/
+.unjo-site-common {
+
+}
+
+.middle .unjo-site-common img{
+    height: 500px;
+    width: 700px;
+}
+
+
 /** SMALL SCREEN ADJUSTMENTS **/
 
 @media all and (max-width: 600px) {
