@@ -9,7 +9,7 @@
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
-<body onload="getcurrentyear(); currentSlide(1)">
+<body onload="getcurrentyear(); currentSlide(1); cookieBanner();">
 	<header>
 		<a href="index.html">Unjo - Customized motor control</a>
 	</header>
@@ -82,7 +82,7 @@
 				You consent to our cookies if you continue to use our website.</div>
 		  </div>
 		  <div class="cookie-consent-banner__actions">
-			<input class="cookie-consent-banner__cta" type="submit" value="OK" onclick="cookiedisplay();">
+			<input class="cookie-consent-banner__cta" type="submit" value="OK" onclick="setCookies();">
 		</div>
 		</div>
 	  </div>
