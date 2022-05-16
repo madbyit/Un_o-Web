@@ -311,17 +311,16 @@ footer p {
 
 /* * { box-sizing: border-box } */
 
-.slideshow-container img {
-    height: 400px;
-    width: 100%;
-    border-radius: 10px;
-}
-
 /* Slideshow container */
 .slideshow-container {
   width: 100%;
   position: relative;
   margin: auto;
+}
+
+.slideshow-container img {
+    max-height: 350px;
+    border-radius: 10px;
 }
 
 /* Hide the images by default */
