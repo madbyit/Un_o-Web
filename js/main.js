@@ -7,13 +7,21 @@ function getcurrentyear()
 
 /** Cookies */
 
-function getcookies()
+function cookiedisplay()
 {
-   var dateCookie = new Date();
-   document.cookie = "Date="+dateCookie;
-   /* By default, the cookie is deleted when the browser is closed. */
-   console.log(document.cookie);
+  var now = new Date();
+  var time = now.getTime();
+  var expireTime = time + 1000*36000;
+  now.setTime(expireTime);
+  document.cookie = 'cookie=ok;expires='+now.toUTCString()+';path=/';
 
+  console.log(document.cookie);
+
+  closecookiebanner();
+}
+
+function closecookiebanner()
+{
    /* Remove banner */
    var cb = document.getElementById("cookie-banner");
    cb.style.display = "none";
@@ -21,7 +29,8 @@ function getcookies()
 
 /** Slide show */
 
-let slideIndex = 1;
+//let slideIndex = 1;
+
 showSlides(slideIndex);
 
 /* Next/previous controls*/
@@ -38,14 +47,24 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("unjoSlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+
+  if (n > slides.length){
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+  
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
+
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
