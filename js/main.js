@@ -1,7 +1,11 @@
+/** Copy right */
+
 function getcurrentyear()
 {
    document.getElementById("year").innerHTML = new Date().getFullYear();
 }
+
+/** Cookies */
 
 function getcookies()
 {
@@ -15,17 +19,17 @@ function getcookies()
    cb.style.display = "none";
 }
 
-/* Slide show */
+/** Slide show */
 
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
+/* Next/previous controls*/
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
+/* Thumbnail image controls */
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
