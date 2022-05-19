@@ -166,8 +166,22 @@ h1 {
   line-height: 20px;
 }
 
+.cookie-consent-banner__cta--secondary { 
+  padding: 9px 13px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: #2CE080;
+}
+
+.cookie-consent-banner__cta--secondary:hover {
+  border-color: #838F93;
+  background-color: transparent;
+  color: #22C870;
+}
+
 .cookie-consent-banner__cta:hover {
   background-color: #20BA68;
+  color: black;
 }
 
 .cookie-consent-banner__cta:last-child {

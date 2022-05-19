@@ -17,6 +17,17 @@ function setCookies()
     cookieBanner();
 }
 
+function declinecookies()
+{
+    var now = new Date();
+    var time = now.getTime();
+    var expireTime = time + 1000*36000;
+    now.setTime(expireTime);
+    document.cookie = 'cookie=;expires='+now.toUTCString()+';path=/';
+    console.log("Cookie declined.");
+    cookieBanner();
+}
+
 function cookieBanner()
 {
   /** Remove banner if there are cookies */
@@ -26,6 +37,10 @@ function cookieBanner()
     /* Remove banner */
     var cb = document.getElementById("cookie-banner");
     cb.style.display = "none";
+  }
+  else
+  {
+    console.log("No cookies");
   }
 }
 
