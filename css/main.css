@@ -71,6 +71,10 @@ header a {
     margin-left: 10px;
 }
 
+header a:hover, a:focus {
+    color: white;
+}
+
 /** FOOTER **/
 
 footer {
