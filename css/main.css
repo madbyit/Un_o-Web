@@ -61,6 +61,7 @@ header {
     height: 30px;
     background: #59C2DF;
     padding: 15px;
+    z-index: 1;
 }
 
 header a {
@@ -81,6 +82,7 @@ footer {
     padding: 0px 10px 15px 20px;
     bottom: 0;
     background: #59C2DF;
+    z-index: 1;
 }
 
 footer p {
@@ -240,17 +242,160 @@ footer p {
 /** COMMON **/
 
 .unjo-site-common {
-
+    color: white;
 }
 
 .middle .unjo-site-common img{
     height: 500px;
     width: 700px;
+    z-index: 0;
 }
+
+/** PAGES **/
+
+#home,
+#news,
+#whatwedo,
+#howwework,
+#whycustomized,
+#casestories,
+#techblog,
+#downloads,
+#whoweare,
+#workinghere,
+#unjoglobalnetwork,
+#imprint,
+#contact {
+    display: none;
+}
+#home:target {
+    display: block;
+}
+#news:target {
+    display: block;
+}
+#whatwedo:target {
+    display: block;
+}
+#howwework:target {
+    display: block;
+}
+#whycustomized:target {
+    display: block;
+}
+#casestories:target {
+    display: block;
+}
+#techblog:target {
+    display: block;
+}
+#downloads:target {
+    display: block;
+}
+#whoweare:target {
+    display: block;
+}
+#workinghere:target {
+    display: block;
+}
+#unjoglobalnetwork:target {
+    display: block;
+}
+#imprint:target {
+    display: block;
+}
+#contact:target {
+    display: block;
+}
+
+/** COOKIES**/
+
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    z-index: 2147483645;
+    box-sizing: border-box;
+    width: 100%;
+  }
+    
+  .cookie-consent-banner__inner {     
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3A4649;
+  }
+    
+  .cookie-consent-banner__copy { 
+    margin-bottom: 16px;
+    padding: 20px;
+    text-align: left;
+  }
+    
+  .cookie-consent-banner__actions {   
+    padding: 10px; 
+  }
+  
+  .cookie-consent-banner__header {
+    margin-bottom: 8px;
+    font-family: "CeraPRO-Bold", sans-serif, arial;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #F1F6F4;
+  }
+  
+  .cookie-consent-banner__description {
+    font-family: "CeraPRO-Regular", sans-serif, arial;
+    font-weight: normal;
+    color: #838F93;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .cookie-consent-banner__cta {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 164px;
+    padding: 11px 13px;        
+    border-radius: 2px;
+    background-color: #2CE080;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-family: "CeraPRO-Regular", sans-serif, arial;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .cookie-consent-banner__cta--secondary { 
+    padding: 9px 13px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: #2CE080;
+  }
+  
+  .cookie-consent-banner__cta--secondary:hover {
+    border-color: #838F93;
+    background-color: transparent;
+    color: #22C870;
+  }
+  
+  .cookie-consent-banner__cta:hover {
+    background-color: #20BA68;
+    color: black;
+  }
+  
+  .cookie-consent-banner__cta:last-child {
+    margin-left: 10px;
+  }
+  
 
 /** SMALL SCREEN ADJUSTMENTS **/
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 900px) {
     header {
         height: 20px;
     }
@@ -277,7 +422,7 @@ footer p {
     }
  }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 500px) {
  
     header a {
         font-size: 15px;

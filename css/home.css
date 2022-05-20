@@ -25,33 +25,6 @@ h1 {
   display: none;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 45%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-  
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(100, 100, 100, 0.8);
-}
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -72,7 +45,6 @@ h1 {
   top: 0;
 }
 
- 
 /* The dots/bullets/indicators */
 .dots {
   text-align: center;
@@ -102,88 +74,4 @@ h1 {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
-
-/** COOKIES**/
-
-.cookie-consent-banner {
-  position: fixed;
-  bottom: 0px;
-  left: 0;
-  z-index: 2147483645;
-  box-sizing: border-box;
-  width: 100%;
-}
-  
-.cookie-consent-banner__inner {     
-  width: 100%;
-  height: fit-content;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #3A4649;
-}
-  
-.cookie-consent-banner__copy { 
-  margin-bottom: 16px;
-  padding: 20px;
-  text-align: left;
-}
-  
-.cookie-consent-banner__actions {   
-  padding: 10px; 
-}
-
-.cookie-consent-banner__header {
-  margin-bottom: 8px;
-  font-family: "CeraPRO-Bold", sans-serif, arial;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: #F1F6F4;
-}
-
-.cookie-consent-banner__description {
-  font-family: "CeraPRO-Regular", sans-serif, arial;
-  font-weight: normal;
-  color: #838F93;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.cookie-consent-banner__cta {
-  box-sizing: border-box;
-  display: inline-block;
-  min-width: 164px;
-  padding: 11px 13px;        
-  border-radius: 2px;
-  background-color: #2CE080;
-  color: #FFF;
-  text-decoration: none;
-  text-align: center;
-  font-family: "CeraPRO-Regular", sans-serif, arial;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.cookie-consent-banner__cta--secondary { 
-  padding: 9px 13px;
-  border: 2px solid white;
-  background-color: transparent;
-  color: #2CE080;
-}
-
-.cookie-consent-banner__cta--secondary:hover {
-  border-color: #838F93;
-  background-color: transparent;
-  color: #22C870;
-}
-
-.cookie-consent-banner__cta:hover {
-  background-color: #20BA68;
-  color: black;
-}
-
-.cookie-consent-banner__cta:last-child {
-  margin-left: 10px;
 }
