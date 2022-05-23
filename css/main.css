@@ -94,10 +94,95 @@ footer p {
     display: inline-block;
 }
 
+
+/** NAVBAR BIG SCREEN**/
+
+
+#navbar-large {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+/* The navigation menu */
+.navbar {
+    overflow: hidden;
+    background-color: #59C2DF;
+    margin-top: 60px;
+}
+
+/* Navigation links */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The subnavigation menu */
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: #59C2DF;
+}
+  
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #59C2DF;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+    float: left;
+    color: black;
+    text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+    font-size: 18px;
+    color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
 /** MENU TOGGLE **/
 
+#nav-content-mini {
+    visibility: hidden;
+}
+
 #menuToggle {
-    display: block;
+    display: none;
     position: fixed;
     top: 90px;
     left: 30px;
@@ -172,7 +257,7 @@ footer p {
     /*  opacity is 1 in opened state (see below) */
     opacity: 1;
     visibility: visible;
-    display: inherit;
+    display: contents;
     /* don't let pointer-events affect descendant elements */
     pointer-events: auto;
 }
@@ -182,7 +267,7 @@ footer p {
     display: none;
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0.5s;
+    transition: visibility 1.5s;
 }
 
 .onclick-menu-content li {
@@ -406,6 +491,17 @@ footer p {
 
     footer {
         height: 20px;
+    }
+
+    #navbar-large {
+        visibility: hidden;
+    }
+
+    #nav-content-mini {
+        visibility: visible;
+    }
+    #menuToggle {
+        display: block;
     }
 
     #navmenu {
