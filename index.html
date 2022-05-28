@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/cookies.css"/>
 	<link rel="stylesheet" href="css/home.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -15,38 +16,41 @@
 </head>
 <body onload="getcurrentyear(); cookieBanner();">
 	<header>
-		<a href="#home">Unjo - Customized motor control</a>
-	</header>
-		<!-- The navigation menu -->
-		<div id="navbar-large" class="navbar">
-			<a href="#home">Home</a>
-			<div class="subnav">
-			<button class="subnavbtn">Customized Motor Control <i class="fa fa-caret-down"></i></button>
-			<div class="subnav-content">
-				<a href="#whatwedo">What we do</a>
-				<a href="#howwework">How we work</a>
-				<a href="#whycustomized">Why customized</a>
+		<div id="header-navbar">
+			<div id="header-navbar-default">
+				<a href="#home">Unjo - Customized motor control</a>
 			</div>
+			<div id="header-navbar-large">
+				<a href="#home">Home</a>
+				<div class="subnav">
+					<button class="subnavbtn">Customized Motor Control <i class="fa fa-caret-down"></i></button>
+					<div class="subnav-content">
+						<a href="#whatwedo">What we do</a>
+						<a href="#howwework">How we work</a>
+						<a href="#whycustomized">Why customized</a>
+					</div>
+				</div>
+				<div class="subnav">
+					<button class="subnavbtn" onclick="test">About Motor Control <i class="fa fa-caret-down"></i></button>
+					<div class="subnav-content">
+						<a href="#casestories">Case stories</a>
+						<a href="#techblog">Tech blog</a>
+						<a href="#downloads">Downloads</a>
+					</div>
+				</div>
+				<div class="subnav">
+					<button class="subnavbtn">About Unjo <i class="fa fa-caret-down"></i></button>
+					<div class="subnav-content">
+						<a href="#whoweare">Who we are</a>
+						<a href="#workinghere">Working here</a>
+						<a href="#unjoglobalnetwork">Unjo global network</a>
+					</div>
+				</div>
+				<a href="#imprint">Imprint</a>
+				<a href="#contact">Contact</a>
 			</div>
-			<div class="subnav">
-			<button class="subnavbtn">About Motor Control <i class="fa fa-caret-down"></i></button>
-			<div class="subnav-content">
-				<a href="#casestories">Case stories</a>
-				<a href="#techblog">Tech blog</a>
-				<a href="#downloads">Downloads</a>
-			</div>
-			</div>
-			<div class="subnav">
-			<button class="subnavbtn">About Unjo <i class="fa fa-caret-down"></i></button>
-			<div class="subnav-content">
-				<a href="#whoweare">Who we are</a>
-				<a href="#workinghere">Working here</a>
-				<a href="#unjoglobalnetwork">Unjo global network</a>
-			</div>
-			</div>
-			<a href="#imprint">Imprint</a>
-			<a href="#contact">Contact</a>
 		</div>
+	</header>
 	<div>
 		<!--Navigation bar-->
 		<div id="nav-content-mini"></div>

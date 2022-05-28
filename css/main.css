@@ -51,7 +51,7 @@ a:hover {
     color: black;
 }
 
-/** HEADER **/
+/** HEADER & NAVIATION**/
 
 header {
     clear: both;
@@ -75,52 +75,43 @@ header a:hover, a:focus {
     color: white;
 }
 
-/** FOOTER **/
 
-footer {
-    clear: both;
-    position: fixed;
-    width: 100%;
-    /* Height of the footer*/ 
-    height: 30px;
-    padding: 0px 10px 15px 20px;
-    bottom: 0;
-    background: #59C2DF;
-    z-index: 1;
+/* The navigation menu */
+
+#header-navbar {
+    display: inline;
 }
 
-footer p {
-    color: black;
-    display: inline-block;
+#header-navbar-default {
+    width: 350px;
+    float: left;
+    font-size: 18px;
 }
 
-
-/** NAVBAR BIG SCREEN**/
-
-
-#navbar-large {
+#header-navbar-large {
     visibility: visible;
     display: flex;
     align-items: center;
-    justify-content: center
-}
-
-/* The navigation menu */
-.navbar {
+    justify-content: center;
     overflow: hidden;
     background-color: #59C2DF;
-    margin-top: 60px;
 }
 
+
 /* Navigation links */
-.navbar a {
+#header-navbar a {
     float: left;
     font-size: 16px;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px;
     text-decoration: none;
 }
+
+#header-navbar-default a {
+    font-size: 20px;
+}
+
 
 /* The subnavigation menu */
 .subnav {
@@ -134,25 +125,25 @@ footer p {
     border: none;
     outline: none;
     color: black;
-    padding: 14px 16px;
+    padding: 10px 12px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    font-weight: bold;
 }
 
-/* Add a red background color to navigation links on hover */
-.navbar a:hover, .subnav:hover .subnavbtn {
-    background-color: #59C2DF;
+.subnavbtn:hover {
+    color: white;
 }
-  
+
+
 /* Style the subnav content - positioned absolute */
 .subnav-content {
     display: none;
     position: absolute;
-    left: 0;
     background-color: #59C2DF;
-    width: 100%;
     z-index: 1;
+    border-radius: 0 0 10px 10px;
 }
 
 /* Style the subnav links */
@@ -162,17 +153,16 @@ footer p {
     text-decoration: none;
 }
 
-/* Add a grey background color on hover */
-.subnav-content a:hover {
-    font-size: 18px;
-    color: black;
-}
-
 /* When you move the mouse over the subnav container, open the subnav content */
 .subnav:hover .subnav-content {
-    display: flex;
+    display: block;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+    color: white;
 }
 
 /** MENU TOGGLE **/
@@ -397,94 +387,30 @@ footer p {
     display: block;
 }
 
-/** COOKIES**/
 
-.cookie-consent-banner {
+/** FOOTER **/
+
+footer {
+    clear: both;
     position: fixed;
-    bottom: 0px;
-    left: 0;
-    z-index: 2147483645;
-    box-sizing: border-box;
     width: 100%;
-  }
-    
-  .cookie-consent-banner__inner {     
-    width: 100%;
-    height: fit-content;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #3A4649;
-  }
-    
-  .cookie-consent-banner__copy { 
-    margin-bottom: 16px;
-    padding: 20px;
-    text-align: left;
-  }
-    
-  .cookie-consent-banner__actions {   
-    padding: 10px; 
-  }
-  
-  .cookie-consent-banner__header {
-    margin-bottom: 8px;
-    font-family: "CeraPRO-Bold", sans-serif, arial;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #F1F6F4;
-  }
-  
-  .cookie-consent-banner__description {
-    font-family: "CeraPRO-Regular", sans-serif, arial;
-    font-weight: normal;
-    color: #838F93;
-    font-size: 16px;
-    line-height: 24px;
-  }
-  
-  .cookie-consent-banner__cta {
-    box-sizing: border-box;
-    display: inline-block;
-    min-width: 164px;
-    padding: 11px 13px;        
-    border-radius: 2px;
-    background-color: #2CE080;
-    color: #FFF;
-    text-decoration: none;
-    text-align: center;
-    font-family: "CeraPRO-Regular", sans-serif, arial;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-  }
-  
-  .cookie-consent-banner__cta--secondary { 
-    padding: 9px 13px;
-    border: 2px solid white;
-    background-color: transparent;
-    color: #2CE080;
-  }
-  
-  .cookie-consent-banner__cta--secondary:hover {
-    border-color: #838F93;
-    background-color: transparent;
-    color: #22C870;
-  }
-  
-  .cookie-consent-banner__cta:hover {
-    background-color: #20BA68;
+    /* Height of the footer*/ 
+    height: 30px;
+    padding: 0px 10px 15px 20px;
+    bottom: 0;
+    background: #59C2DF;
+    z-index: 1;
+}
+
+footer p {
     color: black;
-  }
-  
-  .cookie-consent-banner__cta:last-child {
-    margin-left: 10px;
-  }
-  
+    display: inline-block;
+}
+
 
 /** SMALL SCREEN ADJUSTMENTS **/
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 1200px) {
     header {
         height: 20px;
     }
@@ -493,13 +419,20 @@ footer p {
         height: 20px;
     }
 
-    #navbar-large {
+    #header-navbar-default a{
+        font-size: 20px;
+        padding: 2px 0;
+        
+    }
+
+    #header-navbar-large {
         visibility: hidden;
     }
 
     #nav-content-mini {
         visibility: visible;
     }
+
     #menuToggle {
         display: block;
     }
