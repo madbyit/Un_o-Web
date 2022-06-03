@@ -140,7 +140,6 @@ header a:hover, a:focus {
     color: white;
 }
 
-
 /* Style the subnav content - positioned absolute */
 .subnav-content {
     display: none;
@@ -267,6 +266,13 @@ header a:hover, a:focus {
     opacity: 0;
     visibility: hidden;
     transition: visibility 1.5s;
+}
+
+#amc {
+    display: none;
+}
+#amc:target {
+    display: block;
 }
 
 .onclick-menu-content li {
