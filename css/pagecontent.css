@@ -8,13 +8,13 @@ h1 {
 /** SLIDESHOW **/
 
 /* Slideshow container */
-.slideshow-container {
+#slideshow-container {
   width: 100%;
   position: relative;
   margin: auto;
 }
   
-.slideshow-container img {
+#slideshow-container img {
     height: 450px;
     border-radius: 10px;
     width: 100%;
@@ -74,4 +74,10 @@ h1 {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+
+@media all and (max-width: 500px) {
+ 
+
 }

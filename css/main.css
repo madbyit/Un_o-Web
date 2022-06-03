@@ -10,6 +10,7 @@ body {
     font-family: "Avenir Next", "Avenir", sans-serif;
     height: 100%;
     min-width: 250;
+    min-height: 550px;
 }
 
 /* Create three equal columns that float next to each other */
@@ -84,7 +85,7 @@ header a:hover, a:focus {
 }
 
 #header-navbar-default {
-    width: 350px;
+    width: 400px;
     float: left;
     font-size: 18px;
 }
@@ -426,7 +427,7 @@ footer p {
 
 /** SMALL SCREEN ADJUSTMENTS **/
 
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1350px) {
     header {
         height: 20px;
     }
@@ -471,7 +472,7 @@ footer p {
         padding: 10px;
     }
 
-    .slideshow-container img {
+    #slideshow-container img {
         height: 250px;
     }
  }
@@ -497,8 +498,13 @@ footer p {
         margin-top: 20%;
     }
 
-    .slideshow-container img {
+    #slideshow-container img {
         height: 100px;
         width: 100px;
+    }
+
+    #hq img {
+        height: 300px;
+        width: 400px;
     }
  }
