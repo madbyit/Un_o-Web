@@ -113,6 +113,9 @@ header a:hover, a:focus {
     font-size: 20px;
 }
 
+#header-navbar a:hover {
+    color: white;
+}
 
 /* The subnavigation menu */
 .subnav {
