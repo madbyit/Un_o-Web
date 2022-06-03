@@ -203,7 +203,6 @@ header a:hover, a:focus {
     position: absolute;
     top: 75px;
     height: auto;
-    width:max-content;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 75px;
@@ -219,8 +218,9 @@ header a:hover, a:focus {
 
 #navmenu li {
     padding: 5px 10px;
-    font-size: 21px;
+    font-size: 20px;
     color: black;
+    width: 220px;
 }
 
 #navmenu li:hover,
@@ -252,11 +252,11 @@ header a:hover, a:focus {
 }
 
 .onclick-menu-content {
+    visibility: hidden;
     /* use opacity to fake immediate toggle */
-     display: none;
-     opacity: 0;
-     visibility: hidden;
-     transition: visibility 1.5s;
+    display: none;
+    opacity: 0;
+    transition: visibility 1.5s;
  }
 
 .onclick-menu:hover .onclick-menu-content {
@@ -468,6 +468,7 @@ footer p {
 
     .submenu li {
         margin-right: 15px;
+        padding: 10px;
     }
 
     .slideshow-container img {
@@ -477,12 +478,13 @@ footer p {
 
 @media all and (max-width: 500px) {
  
-    header a {
-        font-size: 15px;
-   }
+    #header-navbar-default a{
+        font-size: 12px;
+        padding: 2px 0;
+    }
 
     footer p {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     #navmenu li {
@@ -497,5 +499,6 @@ footer p {
 
     .slideshow-container img {
         height: 100px;
+        width: 100px;
     }
  }
