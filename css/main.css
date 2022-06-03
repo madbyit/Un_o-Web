@@ -209,6 +209,7 @@ header a:hover, a:focus {
     padding: 50px;
     padding-top: 75px;
     background: #59C2DF;
+    border-radius: 10px;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -231,7 +232,11 @@ header a:hover, a:focus {
         font-size: 22px;
 }
 
-#navmenu .submenu a:hover{
+#menuToggle a:hover, a:focus {
+    color: white;
+}
+
+#navmenu .submenu a:hover {
     color: white;
 }
 
@@ -420,13 +425,12 @@ footer p {
     }
 
     footer {
-        height: 20px;
+        height: 30px;
     }
 
     #header-navbar-default a{
         font-size: 20px;
         padding: 2px 0;
-        
     }
 
     #header-navbar-large {
@@ -446,12 +450,13 @@ footer p {
     }
 
     #navmenu li {
-        font-size: 12px;
+        font-size: 16px;
+        font-weight: bold;
     }
 
     #navmenu li:hover,
         li:focus {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .slideshow-container img {
