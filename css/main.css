@@ -13,6 +13,8 @@ body {
     min-height: 550px;
 }
 
+/** COLUMNS / ROWS **/
+
 /* Create three equal columns that float next to each other */
 .column {
     display: inline-flex;
@@ -43,17 +45,15 @@ body {
     clear: both;
 }
 
-a,div {
+/* Page links */
+a, div {
     text-decoration: none;
     color: #232323;
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: black;
-}
 
-/** HEADER & NAVIATION**/
+/** HEADER & NAVIGATION**/
 
 header {
     clear: both;
@@ -78,18 +78,20 @@ header a:hover, a:focus {
 }
 
 
-/* The navigation menu */
+/* NAVIGATION MENUS */
 
 #header-navbar {
     display: inline;
 }
 
+/* Always show company name */
 #header-navbar-default {
     width: 400px;
     float: left;
     font-size: 18px;
 }
 
+/* Header with naigation large window */
 #header-navbar-large {
     visibility: visible;
     display: flex;
@@ -118,13 +120,13 @@ header a:hover, a:focus {
     color: white;
 }
 
-/* The subnavigation menu */
+/* The subnavigation menus when large window*/
 .subnav {
     float: left;
     overflow: hidden;
 }
 
-/* Subnav button */
+/* Show subnavigation when large window*/
 .subnav .subnavbtn {
     font-size: 16px;
     border: none;
@@ -141,7 +143,7 @@ header a:hover, a:focus {
     color: white;
 }
 
-/* Style the subnav content - positioned absolute */
+/* Style the subnav content */
 .subnav-content {
     display: none;
     position: absolute;
@@ -164,17 +166,18 @@ header a:hover, a:focus {
     justify-content: center;
 }
 
-/* Add a grey background color on hover */
+/* Add a white background color on hover */
 .subnav-content a:hover {
     color: white;
 }
 
-/** MENU TOGGLE **/
+/** MENU TOGGLE SMALL WINDOW - SHOW HAMBURGER MENU **/
 
 #nav-content-mini {
     visibility: hidden;
 }
 
+/* SHow/Hide box with navigation links */
 #menuToggle {
     display: none;
     position: fixed;
@@ -184,109 +187,12 @@ header a:hover, a:focus {
     -webkit-user-select: none;
     user-select: none;
 }
-
-#menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-    cursor: pointer;
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-    -webkit-touch-callout: none;
-}
-
-/** MENU **/
-
-#navmenu {
-    position: absolute;
-    top: 75px;
-    height: auto;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 75px;
-    background: #59C2DF;
-    border-radius: 10px;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
-
-#navmenu li {
-    padding: 5px 10px;
-    font-size: 20px;
-    color: black;
-    width: 220px;
-}
-
-#navmenu li:hover,
-        li:focus {
-        text-decoration: none;
-        cursor: pointer;
-        font-weight: bolder;
-        font-size: 22px;
-}
-
-#menuToggle a:hover, a:focus {
-    color: white;
-}
-
-#navmenu .submenu a:hover {
-    color: white;
-}
-
-/*
- * Toggle/Slide sidebar menu in from the left
- */
-#menuToggle input:checked ~ ul {
-    transform: none;
-}
-
-.onclick-menu:focus {
-    /* clicking on label should toggle the menu */
-    pointer-events: none;
-}
-
-.onclick-menu-content {
-    visibility: hidden;
-    /* use opacity to fake immediate toggle */
-    display: none;
-    opacity: 0;
-    transition: visibility 1.5s;
- }
-
-.onclick-menu:hover .onclick-menu-content {
-    /*  opacity is 1 in opened state (see below) */
-    opacity: 1;
-    visibility: visible;
-    display: block;
-    /* don't let pointer-events affect descendant elements */
-    pointer-events: auto;
-    width: max-content;
-}
-
-#amc {
-    display: none;
-}
-#amc:target {
-    display: block;
-}
-
-.onclick-menu-content li {
-    list-style: none;
-}
-
 /** HAMBURGER / X-MARK **/
 
 /* 
  * Hamburger icon
  */
-#menuToggle span {
+ #menuToggle span {
     display: block;
     width: 33px;
     height: 4px;
@@ -334,6 +240,97 @@ header a:hover, a:focus {
 #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
 }
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Toggle/Slide sidebar menu in from the left
+ */
+ #menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+.onclick-menu:focus {
+    /* clicking on label should toggle the menu */
+    pointer-events: none;
+}
+
+.onclick-menu-content {
+    visibility: hidden;
+    /* use opacity to fake immediate toggle */
+    display: none;
+    opacity: 0;
+    transition: visibility 1.5s;
+ }
+
+.onclick-menu:hover .onclick-menu-content {
+    /*  opacity is 1 in opened state (see below) */
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    /* don't let pointer-events affect descendant elements */
+    pointer-events: auto;
+    width: max-content;
+}
+
+.onclick-menu-content li {
+    list-style: none;
+}
+
+/** HAMBURGER NAV MENU **/
+
+#navmenu {
+    position: absolute;
+    top: 75px;
+    height: auto;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 75px;
+    background: #59C2DF;
+    border-radius: 10px;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#navmenu li {
+    padding: 5px 10px;
+    font-size: 20px;
+    color: black;
+    width: 220px;
+}
+
+#navmenu li:hover,
+        li:focus {
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bolder;
+        font-size: 22px;
+}
+
+/* Change text color on hover*/
+#menuToggle a:hover, a:focus {
+    color: white;
+}
+
+#navmenu .submenu a:hover {
+    color: white;
+}
+
 
 /** COMMON **/
 
