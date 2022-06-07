@@ -17,14 +17,13 @@ function setCookies()
     cookieBanner();
 }
 
-function declinecookies()
+function setNecessaryCookies()
 {
     var now = new Date();
     var time = now.getTime();
     var expireTime = time + 1000*36000;
     now.setTime(expireTime);
-    document.cookie = 'cookie=;expires='+now.toUTCString()+';path=/';
-    console.log("Cookie declined.");
+    document.cookie = 'cookie=onlyNecessary;expires='+now.toUTCString()+';path=/';
     cookieBanner();
 }
 
