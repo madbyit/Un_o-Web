@@ -52,7 +52,3 @@ function loadHome() {
     home.click();
   }
 }
-
-function unfold(id) {
-  document.querySelector('#'+id).classList.add('hover')
-}

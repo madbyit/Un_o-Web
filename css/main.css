@@ -261,33 +261,6 @@ header a:hover, a:focus {
     transform: none;
 }
 
-.onclick-menu:focus {
-    /* clicking on label should toggle the menu */
-    pointer-events: none;
-}
-
-.onclick-menu-content {
-    visibility: hidden;
-    /* use opacity to fake immediate toggle */
-    display: none;
-    opacity: 0;
-    transition: visibility 1.5s;
- }
-
-.onclick-menu:hover .onclick-menu-content {
-    /*  opacity is 1 in opened state (see below) */
-    opacity: 1;
-    visibility: visible;
-    display: block;
-    /* don't let pointer-events affect descendant elements */
-    pointer-events: auto;
-    width: max-content;
-}
-
-.onclick-menu-content li {
-    list-style: none;
-}
-
 /** HAMBURGER NAV MENU **/
 
 #navmenu {
