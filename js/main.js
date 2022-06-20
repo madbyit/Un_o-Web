@@ -46,8 +46,6 @@ function cookieBanner()
 function loadHome() {
   var url = window.location.href; /* Returns full URL */
   var shorturl = url.substring(url.lastIndexOf('/') + 1);
-  console.log("url: " + url);
-  console.log("shorturl:" + shorturl);
   if(shorturl == 'index.html' || shorturl == '')
   {
     var home = document.getElementById("homelink");
