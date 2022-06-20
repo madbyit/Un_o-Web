@@ -307,11 +307,11 @@ header a:hover, a:focus {
 
 /** COMMON **/
 
-.unjo-site-common {
+.site-common {
     color: white;
 }
 
-.middle .unjo-site-common img{
+.middle .site-common img{
     height: 500px;
     width: 700px;
     z-index: 0;
@@ -329,7 +329,7 @@ header a:hover, a:focus {
 #downloads,
 #whoweare,
 #workinghere,
-#unjoglobalnetwork,
+#globalnetwork,
 #imprint,
 #contact {
     display: none;
@@ -364,7 +364,7 @@ header a:hover, a:focus {
 #workinghere:target {
     display: block;
 }
-#unjoglobalnetwork:target {
+#globalnetwork:target {
     display: block;
 }
 #imprint:target {

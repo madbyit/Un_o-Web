@@ -21,7 +21,7 @@ h1 {
 }
 
 /* Hide the images by default */
-.unjoSlides {
+.slides {
   display: none;
 }
 
