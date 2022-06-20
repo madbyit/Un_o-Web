@@ -48,7 +48,7 @@ function loadHome() {
   var shorturl = url.substring(url.lastIndexOf('/') + 1);
   console.log("url: " + url);
   console.log("shorturl:" + shorturl);
-  if(shorturl == 'index.html')
+  if(shorturl == 'index.html' || shorturl == '')
   {
     var home = document.getElementById("homelink");
     home.click();
