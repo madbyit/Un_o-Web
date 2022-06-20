@@ -46,7 +46,9 @@ function cookieBanner()
 function loadHome() {
   var url = window.location.href; /* Returns full URL */
   var shorturl = url.substring(url.lastIndexOf('/') + 1);
-  if((shorturl == 'index.html') || (url == 'https://madbyit.github.io/Un_o-Web/'))
+  console.log("url: " + url);
+  console.log("shorturl:" + shorturl);
+  if(shorturl == 'index.html')
   {
     var home = document.getElementById("homelink");
     home.click();
