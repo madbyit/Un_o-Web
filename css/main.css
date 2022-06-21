@@ -177,12 +177,12 @@ header a:hover, a:focus {
     visibility: hidden;
 }
 
-/* SHow/Hide box with navigation links */
+/* Show/Hide box with navigation links */
 #menuToggle {
     display: none;
     position: fixed;
-    top: 90px;
-    left: 30px;
+    top: 80px;
+    left: 20px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -266,13 +266,13 @@ header a:hover, a:focus {
 #navmenu {
     position: absolute;
     top: 75px;
-    height: auto;
+    height: 300px;
     margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 75px;
+    padding: 70px;
     background: #59C2DF;
     border-radius: 10px;
     list-style-type: none;
+    overflow-y: auto;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
